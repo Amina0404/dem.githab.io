@@ -2,37 +2,198 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Christmas Crossword</title>
-    <link type="text/css" rel="stylesheet" href="style.css" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e6f2ff;
+            padding: 20px;
+            color: #2c3e50;
+        }
+        h1 {
+            text-align: center;
+            color: #c0392b;
+        }
+        .grid {
+            display: inline-grid;
+            grid-template-columns: repeat(10, 40px);
+            gap: 1px;
+            margin: 20px auto;
+            border: 2px solid #333;
+        }
+        .cell {
+            width: 40px;
+            height: 40px;
+            background-color: white;
+            border: 1px solid #999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 18px;
+            text-transform: uppercase;
+        }
+        .black {
+            background-color: black;
+        }
+        .number {
+            position: relative;
+            font-size: 10px;
+            top: -15px;
+            left: -15px;
+            color: black;
+        }
+        .clues {
+            max-width: 600px;
+            margin: 20px auto;
+        }
+        .clues h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #c0392b;
+            padding-bottom: 5px;
+        }
+        .clue {
+            margin: 8px 0;
+        }
+    </style>
 </head>
 <body>
-    <h1>Christmas Crossword (5 words)</h1>
+    <h1>🎄 Christmas Crossword 🎄</h1>
 
-    <!-- Back button -->
-    <p>
-        <button onclick="window.history.back()">← Back</button>
-    </p>
+    <!-- Кроссворд 10×10 -->
+    <div class="grid" id="crossword">
+        <!-- Строка 1 -->
+        <div class="cell black"></div>
+        <div class="cell black"></div>
+        <div class="cell black"></div>
+        <div class="cell black"></div>
+        <div class="cell black"></div>
+        <div class="cell black"></div>
+        <div class="cell black"></div>
+        <div class="cell black"></div>
+        <div class="cell black"></div>
+        <div class="cell black"></div>
 
-    <h2>Clues:</h2>
-    <ol>
-        <li>A cheerful figure made of snow, often with a carrot nose.</li>
-        <li>Mythical animal that pulls Santa’s sleigh through the sky.</li>
-        <li>A gift wrapped in colorful paper, given on December 25th.</li>
-        <li>A joyful song sung during the Christmas season.</li>
-        <li>A plant people kiss under during Christmas parties.</li>
-    </ol>
+        <!-- Строка 2 -->
+        <div class="cell black"></div>
+        <div class="cell"><span class="number">1</span>S</div>
+        <div class="cell">N</div>
+        <div class="cell">O</div>
+        <div class="cell">W</div>
+        <div class="cell">M</div>
+        <div class="cell">A</div>
+        <div class="cell">N</div>
+        <div class="cell black"></div>
+        <div class="cell black"></div>
 
-    <!-- Answers spoiler -->
-    <details>
-        <summary><strong>Show answers</strong></summary>
-        <ul>
-            <li><strong>1. Snowman</strong></li>
-            <li><strong>2. Reindeer</strong></li>
-            <li><strong>3. Present</strong></li>
-            <li><strong>4. Carol</strong></li>
-            <li><strong>5. Mistletoe</strong></li>
-        </ul>
-    </details>
+        <!-- Строка 3 -->
+        <div class="cell black"></div>
+        <div class="cell">C</div>
+        <div class="cell">A</div>
+        <div class="cell">R</div>
+        <div class="cell">O</div>
+        <div class="cell">L</div>
+        <div class="cell black"></div>
+        <div class="cell black"></div>
+        <div class="cell"><span class="number">2</span>G</div>
+        <div class="cell">I</div>
 
+        <!-- Строка 4 -->
+        <div class="cell"><span class="number">3</span>R</div>
+        <div class="cell">E</div>
+        <div class="cell">I</div>
+        <div class="cell">N</div>
+        <div class="cell">D</div>
+        <div class="cell">E</div>
+        <div class="cell">E</div>
+        <div class="cell">R</div>
+        <div class="cell">F</div>
+        <div class="cell">T</div>
+
+        <!-- Строка 5 -->
+        <div class="cell">E</div>
+        <div class="cell black"></div>
+        <div class="cell">I</div>
+        <div class="cell black"></div>
+        <div class="cell black"></div>
+        <div class="cell black"></div>
+        <div class="cell black"></div>
+        <div class="cell black"></div>
+        <div class="cell">T</div>
+        <div class="cell">R</div>
+
+        <!-- Строка 6 -->
+        <div class="cell">E</div>
+        <div class="cell black"></div>
+        <div class="cell">N</div>
+        <div class="cell black"></div>
+        <div class="cell black"></div>
+        <div class="cell black"></div>
+        <div class="cell black"></div>
+        <div class="cell black"></div>
+        <div class="cell">R</div>
+        <div class="cell">E</div>
+
+        <!-- Строка 7 -->
+        <div class="cell">E</div>
+        <div class="cell black"></div>
+        <div class="cell">D</div>
+        <div class="cell black"></div>
+        <div class="cell black"></div>
+        <div class="cell black"></div>
+        <div class="cell black"></div>
+        <div class="cell black"></div>
+        <div class="cell black"></div>
+        <div class="cell">E</div>
+
+        <!-- Строка 8 -->
+        <div class="cell black"></div>
+        <div class="cell black"></div>
+        <div class="cell">E</div>
+        <div class="cell black"></div>
+        <div class="cell black"></div>
+        <div class="cell black"></div>
+        <div class="cell black"></div>
+        <div class="cell black"></div>
+        <div class="cell black"></div>
+        <div class="cell black"></div>
+
+        <!-- Строка 9 -->
+        <div class="cell black"></div>
+        <div class="cell black"></div>
+        <div class="cell">R</div>
+        <div class="cell black"></div>
+        <div class="cell black"></div>
+        <div class="cell black"></div>
+        <div class="cell black"></div>
+        <div class="cell black"></div>
+        <div class="cell black"></div>
+        <div class="cell black"></div>
+
+        <!-- Строка 10 -->
+        <div class="cell black"></div>
+        <div class="cell black"></div>
+        <div class="cell black"></div>
+        <div class="cell black"></div>
+        <div class="cell black"></div>
+        <div class="cell black"></div>
+        <div class="cell black"></div>
+        <div class="cell black"></div>
+        <div class="cell black"></div>
+        <div class="cell black"></div>
+    </div>
+
+    <!-- Подсказки -->
+    <div class="clues">
+        <h2>Across:</h2>
+        <div class="clue">1. A figure made of snow, often with a carrot nose and scarf.</div>
+        <div class="clue">3. Santa’s magical animals that pull his sleigh through the sky.</div>
+
+        <h2>Down:</h2>
+        <div class="clue">1. A joyful Christmas song sung in groups.</div>
+        <div class="clue">2. A wrapped surprise given on Christmas morning.</div>
+        <div class="clue">4. Evergreen plant decorated with lights and ornaments during the holidays.</div>
+    </div>
 </body>
 </html>
