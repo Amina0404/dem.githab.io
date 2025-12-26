@@ -2,51 +2,197 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Новогодний кроссворд</title>
-    <link type="text/css" rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Новогодний кроссворд — Вариант 2</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e6f2ff;
+            padding: 20px;
+            color: #2c3e50;
+        }
+        h1 {
+            text-align: center;
+            color: #c0392b;
+        }
+        .grid {
+            display: inline-grid;
+            grid-template-columns: repeat(10, 40px);
+            gap: 1px;
+            margin: 20px auto;
+            border: 2px solid #333;
+        }
+        .cell {
+            width: 40px;
+            height: 40px;
+            background-color: white;
+            border: 1px solid #999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 18px;
+            text-transform: uppercase;
+        }
+        .black {
+            background-color: black;
+        }
+        .number {
+            position: relative;
+            font-size: 10px;
+            top: -15px;
+            left: -15px;
+            color: black;
+        }
+        .clues {
+            max-width: 600px;
+            margin: 20px auto;
+        }
+        .clues h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #c0392b;
+            padding-bottom: 5px;
+        }
+        .clue {
+            margin: 8px 0;
+        }
+    </style>
 </head>
 <body>
-    <h1>Новогодний кроссворд</h1>
+    <h1>🎄 Новогодний кроссворд — Вариант 2 🎄</h1>
 
-    <!-- Кнопка "Назад" -->
-    <p>
-        <button onclick="window.history.back()">← Назад</button>
-    </p>
+    <!-- Кроссворд 10×10 -->
+    <div class="grid" id="crossword">
+        <!-- Строка 1 -->
+        <div class="cell black"></div>
+        <div class="cell black"></div>
+        <div class="cell black"></div>
+        <div class="cell black"></div>
+        <div class="cell black"></div>
+        <div class="cell black"></div>
+        <div class="cell black"></div>
+        <div class="cell black"></div>
+        <div class="cell black"></div>
+        <div class="cell black"></div>
 
-    <h2>По горизонтали:</h2>
-    <ol>
-        <li>Весёлая игрушка из снежных комков с морковным носом.</li>
-        <li>Главный символ Нового года, наряжается с верхушки.</li>
-        <li>То, что обязательно лежит под ёлкой 31 декабря.</li>
-        <li>Ледяная обувь для скольжения по катку.</li>
-        <li>Самое холодное время года, начинается 1 декабря.</li>
-    </ol>
+        <!-- Строка 2 -->
+        <div class="cell black"></div>
+        <div class="cell"><span class="number">1</span>С</div>
+        <div class="cell">Н</div>
+        <div class="cell">Е</div>
+        <div class="cell">Г</div>
+        <div class="cell">О</div>
+        <div class="cell">В</div>
+        <div class="cell">И</div>
+        <div class="cell"><span class="number">2</span>З</div>
+        <div class="cell">И</div>
 
-    <h2>По вертикали:</h2>
-    <ol>
-        <li>Сочный цитрус, без которого не обходится ни один новогодний стол.</li>
-        <li>Праздничный персонаж в красной шубе и с белой бородой.</li>
-        <li>Вьюга, сильный снегопад с ветром.</li>
-        <li>Яркая бумажная «петарда», которую хлопают на празднике.</li>
-        <li>Цепочка из цветных фонариков, украшающая ёлку или улицу.</li>
-    </ol>
+        <!-- Строка 3 -->
+        <div class="cell black"></div>
+        <div class="cell">М</div>
+        <div class="cell">Е</div>
+        <div class="cell">Т</div>
+        <div class="cell">Е</div>
+        <div class="cell">Л</div>
+        <div class="cell">Ь</div>
+        <div class="cell black"></div>
+        <div class="cell">М</div>
+        <div class="cell">А</div>
 
-    <!-- Спойлер с ответами -->
-    <details>
-        <summary><strong>Показать ответы</strong></summary>
-        <ul>
-            <li><strong>1. Снеговик</strong></li>
-            <li><strong>2. Ёлка</strong></li>
-            <li><strong>3. Подарок</strong></li>
-            <li><strong>4. Коньки</strong></li>
-            <li><strong>5. Зима</strong></li>
-            <li><strong>6. Мандарин</strong></li>
-            <li><strong>7. Дедмороз</strong></li>
-            <li><strong>8. Метель</strong></li>
-            <li><strong>9. Хлопушка</strong></li>
-            <li><strong>10. Гирлянда</strong></li>
-        </ul>
-    </details>
+        <!-- Строка 4 -->
+        <div class="cell black"></div>
+        <div class="cell">Е</div>
+        <div class="cell black"></div>
+        <div class="cell">Л</div>
+        <div class="cell">Я</div>
+        <div class="cell">Н</div>
+        <div class="cell">Д</div>
+        <div class="cell">А</div>
+        <div class="cell black"></div>
+        <div class="cell black"></div>
 
+        <!-- Строка 5 -->
+        <div class="cell"><span class="number">3</span>Г</div>
+        <div class="cell">И</div>
+        <div class="cell">Р</div>
+        <div class="cell">Л</div>
+        <div class="cell">Я</div>
+        <div class="cell">Н</div>
+        <div class="cell">Д</div>
+        <div class="cell">А</div>
+        <div class="cell black"></div>
+        <div class="cell black"></div>
+
+        <!-- Строка 6 -->
+        <div class="cell">К</div>
+        <div class="cell">О</div>
+        <div class="cell">Н</div>
+        <div class="cell">Ь</div>
+        <div class="cell">К</div>
+        <div class="cell">И</div>
+        <div class="cell black"></div>
+        <div class="cell black"></div>
+        <div class="cell black"></div>
+        <div class="cell black"></div>
+
+        <!-- Строка 7 -->
+        <div class="cell black"></div>
+        <div class="cell">Н</div>
+        <div class="cell">Ь</div>
+        <div class="cell">К</div>
+        <div class="cell">И</div>
+        <div class="cell black"></div>
+        <div class="cell black"></div>
+        <div class="cell black"></div>
+        <div class="cell black"></div>
+        <div class="cell black"></div>
+
+        <!-- Строка 8 -->
+        <div class="cell black"></div>
+        <div class="cell black"></div>
+        <div class="cell black"></div>
+        <div class="cell black"></div>
+        <div class="cell black"></div>
+        <div class="cell black"></div>
+        <div class="cell black"></div>
+        <div class="cell black"></div>
+        <div class="cell black"></div>
+        <div class="cell black"></div>
+
+        <!-- Строка 9 -->
+        <div class="cell black"></div>
+        <div class="cell black"></div>
+        <div class="cell black"></div>
+        <div class="cell black"></div>
+        <div class="cell black"></div>
+        <div class="cell black"></div>
+        <div class="cell black"></div>
+        <div class="cell black"></div>
+        <div class="cell black"></div>
+        <div class="cell black"></div>
+
+        <!-- Строка 10 -->
+        <div class="cell black"></div>
+        <div class="cell black"></div>
+        <div class="cell black"></div>
+        <div class="cell black"></div>
+        <div class="cell black"></div>
+        <div class="cell black"></div>
+        <div class="cell black"></div>
+        <div class="cell black"></div>
+        <div class="cell black"></div>
+        <div class="cell black"></div>
+    </div>
+
+    <!-- Подсказки -->
+    <div class="clues">
+        <h2>По горизонтали:</h2>
+        <div class="clue">1. Весёлая зимняя игрушка из снега с морковным носом.</div>
+        <div class="clue">3. Цепочка из лампочек, украшающая ёлку или улицу.</div>
+
+        <h2>По вертикали:</h2>
+        <div class="clue">1. Сильный снегопад с ветром.</div>
+        <div class="clue">2. Короткое название времени года, полного снега и праздников.</div>
+    </div>
 </body>
 </html>
