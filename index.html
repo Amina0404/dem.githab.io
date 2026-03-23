@@ -13,6 +13,33 @@
         <button onclick="window.history.back()">← Назад</button>
     </p>
 
+    <h2>23.03.2026</h2>
+    <p><strong>📊 Результаты тестирования модели КАСКО</strong></p>
+    <p>Завершено обучение дерева решений для оценки страховых рисков. Модель анализирует три параметра: возраст водителя, стаж вождения и количество ДТП.</p>
+    
+    <p><strong>Основные метрики:</strong></p>
+    <ul>
+        <li>✅ <strong>Общая точность (Accuracy):</strong> 0.9625 (96.25%)</li>
+        <li>📈 <strong>Precision (Отказ):</strong> 1.00 | <strong>Recall:</strong> 0.40</li>
+        <li>📈 <strong>Precision (Одобрено):</strong> 0.96 | <strong>Recall:</strong> 1.00</li>
+        <li>⚖️ <strong>F1-score (взвешенный):</strong> 0.95</li>
+    </ul>
+    
+    <p><small>📋 Детальный отчёт (support: 400 записей):</small></p>
+    <pre style="background: #f5f5f5; padding: 10px; border-left: 3px solid #4CAF50; overflow-x: auto;">
+              precision    recall  f1-score   support
+       Отказ       1.00      0.40      0.57        25
+    Одобрено       0.96      1.00      0.98       375
+    accuracy                           0.96       400
+   macro avg       0.98      0.70      0.78       400
+weighted avg       0.96      0.96      0.95       400
+    </pre>
+    
+    <p>💾 Модель сохранена в файл <code>kasko_decision_tree.pkl</code> для использования в веб-приложении.</p>
+    <blockquote style="border-left: 4px solid #2196F3; padding-left: 15px; margin: 15px 0; background: #e3f2fd;">
+        <em>Примечание:</em> Высокая точность на классе «Одобрено» (98%) означает, что модель надёжно одобряет низкорисковых клиентов. Низкий recall для «Отказа» (40%) — зона для доработки: можно добавить больше признаков или сбалансировать данные.
+    </blockquote>
+
     <h2>20.12.2025</h2>
     <p>Пропуск-3 раза</p>
     
@@ -35,7 +62,7 @@
             И здоровье — всему дому!
         </p>
         <p>
-            <a href="https://content-studio.sberdevices.ru/media/019b16f5-d46d-7443-b8e4-276feb3439fc/019b5b3f-6beb-7ed2-9290-3688072f0fe1.mp4#t=0.001    "
+            <a href="https://content-studio.sberdevices.ru/media/019b16f5-d46d-7443-b8e4-276feb3439fc/019b5b3f-6beb-7ed2-9290-3688072f0fe1.mp4#t=0.001      "
                target="_blank" rel="noopener noreferrer">
                 Видео с колядкой
             </a>
@@ -45,7 +72,7 @@
     <h2>15.10.2025</h2>
     <p>
         Я сделала Новогодние кроссворды для сайта 
-        <a href="http://адрес-сайта-друга" title="Блог моего друга">https://sabrinka-epilepsus.github.io/lellele/index.html     </a>.
+        <a href="http://адрес-сайта-друга" title="Блог моего друга">https://sabrinka-epilepsus.github.io/lellele/index.html       </a>.
     </p>
 
     <h2>01.09.2025</h2>
@@ -95,7 +122,7 @@
 
     <p>
         Иконки: 
-        <a href="https://www.flaticon.com/ru/free-icons/-     " title="рождественский орнамент иконки">
+        <a href="https://www.flaticon.com/ru/free-icons/-       " title="рождественский орнамент иконки">
             Рождественский орнамент иконки от Pixelmeetup - Flaticon
         </a>
     </p>
@@ -107,9 +134,3 @@
     </script>
 </body>
 </html>
-
-  <h2>23.03.2026</h2>
-    <p>  
-
-        показатель точности модели по выдаче кридита:0,69
-     </p>
